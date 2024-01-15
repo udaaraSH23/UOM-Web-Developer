@@ -14,13 +14,14 @@
 
 <body>
     <nav class="navBar">
-        <label id="Logo">FRUITSHOP</label>
-        <ul>
+        <p id="Logo">FRUITSHOP</p>
+        <ul id="menu" class="menuBar">
             <li id="Home"><a href="#hero">Home</a></li>
             <li id="Buy"><a href="#buyFoods">Buy</a></li>
             <li id="About"><a href="#table">About</a></li>
             <li id="Contactus"><a href="#footer">Contact Us</a></li>
         </ul>
+        <div id="icon" class="hamburg"></div>
     </nav>
 
     <section id="hero">
@@ -55,9 +56,9 @@
                     <p class="fruitName">Apple</p>
                     <p class="price">Price 10$</p>
                     <div class="buttonSet">
-                        <button>-</button>
-                        <p>1</p>
-                        <button>+</button>
+                        <button id="subtract">-</button>
+                        <p id="itemCount">1</p>
+                        <button id="sum">+</button>
                     </div>
                     <button id="buyNow">BUY NOW</button>
                 </div>
@@ -192,6 +193,7 @@
     <footer>
         @Copyright to Udara Shanuka
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
