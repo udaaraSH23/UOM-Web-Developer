@@ -3,12 +3,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    
 }
 
+/*Default Colors and Fonts*/
+
+:root{
+    --primary:#FFA500;
+    --secondary:#2E8B57;
+    --highlight:#FF6347;
+    --background:#FFF8DC;
+    --text:#333333;
+
+    --headings:"Playfair Display";
+    --secHeadings:"Montserrat";
+    --body:"Noto Serif";
+    --Logo:"Pacifico";
+
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--body);
+    font-weight: bold;
+    
+}
+
+#Logo{
+    font-family:cursive;
+}
 .navBar{
+    z-index: 12;
+    background-color: var(--primary);
+    color: var(--background);
     display: block;
     height: 3rem;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
     width: 100%;
     position: fixed;
 }
@@ -19,13 +51,26 @@
 
 .navBar li{
     display: inline;
-    padding: 1rem;
+    font-weight: bold;
+    
+    
       
 }
+.navBar a{
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--background);
+}
+.navBar a:hover{
+    background-color:var(--highlight);
+    color: var(--background);
+}
+
+
 /* Hero Section*/
 #hero{
-    padding: 4rem 2rem 0 2rem;
-    height: 100vh;
+    padding: 4rem 1rem 0 1rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     
@@ -33,23 +78,64 @@
 
 #hero h1{
     font-size: 4rem;
+    color: var(--primary);
+    font-family: var(--headings);
 }
 #hero h4{
         padding-top: 1rem;
+        color: var(--secondary);
+        font-family: var(--secHeadings);
 }
+
+ 
 #imageContainer{
-    padding-top: 2rem;
+    position: relative;
+    margin: 3rem 0 0 0;
+    height: auto;
+    width: 100%;
+    
 }
-#imageContainer #left{
-   text-align: left;
-   padding: 1rem; 
+
+#imageContainer img{
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    z-index: -5;
+    opacity: 0.4;
+    width: 200px;
+    height: auto;
+    float:right;
 }
-#imageContainer #right{
-    padding: 1rem;
-    text-align: right;
+
+#p1{
+    font-family: var(--body);
+    
+    font-weight: 800;
+    text-align: justify;
+    line-height: 1.3rem;
+    letter-spacing: 0.07rem;
+    max-width: 70%;
+
 }
 
 /* Buy Section*/
+.buyFoods{
+    margin-top: 2rem;
+    padding-top: 3rem;
+
+}
+
+.buyFoods h3{
+    font-family: var(--secHeadings);
+    font-size: 4rem;
+    margin-left:1rem ;
+    color: var(--secondary);
+}
+.buyFoods h4{
+    font-family: var(--body),Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-left:1rem ;
+}
 
 .itemContainer{
     display: flex;
@@ -57,7 +143,7 @@
     align-items: center;
     justify-content: center;
     margin: 1rem;
-    padding: 2rem;
+    
 }
 
 .container{
@@ -86,6 +172,7 @@
 .buttonSet{
     display: block;
     margin: 1rem;
+    
 }
 .buttonSet button,.buttonSet p{
     width: 1.5rem;
@@ -93,23 +180,36 @@
     padding: 0.5rem;
     margin: 0.5rem;
     display: inline;
+    border: none;
+
+    color: var(--background);
+    background-color: var(--secondary);
 }
 
 .fruitName{
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--secondary);
 }
 .price{
     font-size: 1rem;
+    color: var(--highlight);
 }
 
 #buyNow{
     width: 100%;
     padding: 1rem;
+    border: none;
+    background-color: var(--primary);
 }
 
 /*Table*/
 
+#table h1{
+    font-size: 2rem;
+    margin: 1rem;
+    color: var(--secondary);
+}
 .tableSet{
     margin-top: 3rem;
     display: flex;
@@ -120,23 +220,37 @@
 
 
 table {
-    border-collapse: collapse;
+    
     width: 80%;
   }
+
+th{
+    background-color: var(--highlight);
+    color: var(--background);
+}
   
 th,td{
     padding: 1rem;
     text-align: center;
-    border-bottom: 1px solid black;
+    border:none;
+    font-weight: 700;
 }
 
 /*Link Section*/
 
 #links{
-    margin: 2rem 3rem;
+    margin: 2rem 1rem;
 }
 #links h3{
-    margin: 2rem;
+    font-size: 2rem;
+    color: var(--secondary);
+}
+#links ul{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    list-style:circle;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
 }
 
 footer{
@@ -144,6 +258,6 @@ footer{
     width: 100%;
     padding: 1rem;
     text-align: center;
-    background-color: aquamarine;
+    background-color: var(--primary);
      
 }
