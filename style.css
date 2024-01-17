@@ -204,9 +204,14 @@ body{
     margin: 0.5rem;
     display: inline;
     border: none;
-
     color: var(--background);
     background-color: var(--secondary);
+}
+
+.buttonSet button:hover{
+    background-color: #22c96a;
+    cursor: pointer;
+    
 }
 
 .fruitName{
@@ -223,7 +228,15 @@ body{
     width: 100%;
     padding: 1rem;
     border: none;
+    border-radius: 2rem;
     background-color: var(--primary);
+}
+
+#buyNow:hover{
+    color: var(--background);
+    background-color:#FF6347;
+    cursor: pointer;
+
 }
 
 /*Table*/
@@ -242,6 +255,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 
@@ -322,9 +336,30 @@ footer{
         height: 0.8rem;
         
     }
-   
-    
-    
+  
+}
+
+@media (max-width:430px){
+    .buttonSet{
+        display: block;
+        margin: 0.5rem;
+        
+    }
+    .buttonSet button,.buttonSet p{
+        width: 1.5rem;
+        height: 2rem;
+        padding: 0.3rem;
+        margin: 0.3rem;
+        display: inline;
+        border: none;
+        color: var(--background);
+        background-color: var(--secondary);
+    }
+
+    .container{
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 
